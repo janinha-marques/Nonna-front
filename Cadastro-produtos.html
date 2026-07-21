@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="public/style/index.css">
 
 </head>
+
 <body>
     <nav>
         <a href="index.html">Cantina da Nonna</a>
@@ -20,6 +22,122 @@
 
     <h1>Cadastro de produtos</h1>
     <p>Formulario de exemplo para cadastrar produto do Cardapio</p>
-    
+
+    <form>
+
+        <fieldset>
+
+            <legend>Informações Principais</legend>
+
+            <p>
+                <label for="nome-produto">Nome do Produto:</label><br>
+                <input type="text" id="nome-produto" name="nome-produto" placeholder="Ex.: lasanha bolonhesa" required
+                    minlength="3" maxlength="60">
+
+
+            </p>
+
+            <p>
+                <label for="codigo-produto"> Codigo do produto:</label><br>
+                <input type="text" id="codigo-produto" name=" Codigo-produto" placeholder="Ex.: PRD-001" required
+                    maxlength="10">
+
+            </p>
+
+            <p>
+                <label for="categoria">Categoria:</label><br>
+                <select id="categoria" name="Categoria" required>
+
+                    <option value="">Selecione uma Categoria</option>
+
+                    <option value="massa">Massa</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="entrada">Entrada</option>
+                    <option value="bebida">Bebida</option>
+                    <option value="sobremesa">Sobremesa</option>
+                </select>
+
+            </p>
+
+            <p>
+                <label for="preco">Preço</label><br>
+                <input type="number" id="preco" name="preco" placeholder="Ex.: 42" required min="1" step="0,01">
+
+            </p>
+
+            <p>
+
+                <label for="imagem-produto">Imagem do produto:</label><br>
+                <input type="file" id="imagem-produto" name="imagem-produto" accept="image/*">
+            </p>
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Detalhes do Produto</legend>
+
+            <p>Disponibilidade:</p>
+
+            <input type="radio" id="disponivel-sim" name="disponibilidade" value="sim" required>
+            <label for="disponivel-sim">Disponível</label><br>
+
+            <input type="radio" id="disponivel-nao" name="disponibilidade" value="nao">
+            <label for="diponivel-nao">Indisponível</label><br>
+
+            <p>Opções de Produto:</p>
+
+            <input type="checkbox" id="vegetariano" name="opcoes" value="vegetariano">
+            <label for="vegetariano">Vegetariano</label><br>
+
+            <input type="checkbox" id="sem-glute" name="sem-gluten">
+            <label for="sem-gluten">Sem Gluten</label><br>
+
+            <input type="checkbox" id="promocao" name="opcoes" value="promocao">
+            <label for="promocao">Produto em Promoção</label><br>
+
+            <p>
+                <label for="descricao">Descrição:</label><br>
+                <textarea id="descricao" name="descricao" rows="5" colos="40"
+                    placeholder="Descreva os ingredientes e detalhes do produto" maxlength="300"></textarea>>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="checkbox" id="conferencia" name="conferencia" required>
+            <label for="conferencia">Revisei as Informações antes de cadastrar.</label>
+
+        </p>
+
+        <button type="submit">Cadastrar Produto</button>
+
+        <button type="reset">Limpar Formulárioi</button>
+
+    </form>
+
+    <footer>
+        <div>
+            <section>
+                <h2>Contato</h2>
+                <p>Rua das Oliveiras, 120</p>
+                <p>Centro Araranguá/SC.</p>
+                <p>Telefone: 99812-3245</p>
+
+
+            </section>
+
+            <section>
+                <h2>Localização</h2>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55856.94855517226!2d-49.537956866782835!3d-28.955966025059663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95222e5228f59277%3A0x2443a8fb55419324!2sParaiso%20Das%20Noivas%20e%20Festas%20%7C%20Aluguel%20de%20Trajes%20Sociais%20%7C%20Vestidos%20de%20Noiva%20%7C%20Vestidos%20para%20Formatura!5e0!3m2!1spt-BR!2sbr!4v1784500674402!5m2!1spt-BR!2sbr"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+
+            </section>
+        </div>
+        <p>&copy; 2026 Cantina da Nonna.</p>
+    </footer>
 </body>
+
 </html>
